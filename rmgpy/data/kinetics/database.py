@@ -423,9 +423,11 @@ library instead, depending on the main bath gas (N2 or Ar/He, respectively)\n"""
         same_reactants = False
         if len(reactants) == 2:
             if reactants[0] is reactants[1]:
-                reactants[1] = reactants[1].copy(deep=True)
+                copy_reactant = reactants[1].copy(deep=True)
+                copy_reactant.props = reactants[1].props
+                reactants[1] = copy_reactant
                 same_reactants = True
-            elif reactants[0].isIsomorphic(reactants[1]):
+            elif reactants[0].isIsomorphic(reactants[1]) and reactants[0].props == reactants[1].props:
                 same_reactants = True
 
         # Convert to Species objects if necessary
