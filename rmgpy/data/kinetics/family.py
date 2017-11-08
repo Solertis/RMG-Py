@@ -1661,34 +1661,7 @@ class KineticsFamily(Database):
                                     if productStructures is not None:
                                         rxn = self.__createReaction(reactantStructures, productStructures, forward)
                                         if rxn: rxnList.append(rxn)
-        # If products is given, remove reactions from the reaction list that
-        # don't generate the given products
-        if products is not None:
-            products = ensure_species(products, resonance=True)
-
-            rxnList0 = rxnList[:]
-            rxnList = []
-            for reaction in rxnList0:
-            
-                products0 = reaction.products if forward else reaction.reactants
-                    
-                # Skip reactions that don't match the given products
-                match = False
-
-                if len(products) == len(products0) == 1:
-                    if products[0].isIsomorphic(products0[0]):
-                        match = True
-                elif len(products) == len(products0) == 2:
-                    if products[0].isIsomorphic(products0[0]) and products[1].isIsomorphic(products0[1]):
-                        match = True
-                    elif products[0].isIsomorphic(products0[1]) and products[1].isIsomorphic(products0[0]):
-                        match = True
-                elif len(products) == len(products0):
-                    raise NotImplementedError("Can't yet filter reactions with {} products".format(len(products)))
-                    
-                if match: 
-                    rxnList.append(reaction)
-
+        
         # Determine the reactant-product pairs to use for flux analysis
         # Also store the reaction template (useful so we can easily get the kinetics later)
         for reaction in rxnList:
@@ -1709,6 +1682,50 @@ class KineticsFamily(Database):
             
             # We're done with the labeled atoms, so delete the attribute
             del reaction.labeledAtoms
+
+        # If products is given, remove reactions from the reaction list that
+        # don't generate the given products
+        if products is not None:
+            products = ensure_species(products, resonance=True)
+
+            rxnList0 = rxnList[:]
+            rxnList = []
+            for reaction in rxnList0:
+            
+                products0 = reaction.products if forward else reaction.reactants
+                    
+                # Skip reactions that don't match the given products
+                match = False
+
+                if len(products) == len(products0) == 1:
+                    if products[0].isIsomorphic(products0[0]):
+                        match = True
+                        if forward:
+                            reaction.products[0].label = products[0].label
+                        else:
+                            reaction.reactants[0].label = products[0].label
+                elif len(products) == len(products0) == 2:
+                    if products[0].isIsomorphic(products0[0]) and products[1].isIsomorphic(products0[1]):
+                        match = True
+                        if forward:
+                            reaction.products[0].label = products[0].label
+                            reaction.products[1].label = products[1].label
+                        else:
+                            reaction.reactants[0].label = products[0].label
+                            reaction.products[1].label = products[1].label
+                    elif products[0].isIsomorphic(products0[1]) and products[1].isIsomorphic(products0[0]):
+                        match = True
+                        if forward:
+                            reaction.products[1].label = products[0].label
+                            reaction.products[0].label = products[1].label
+                        else:
+                            reaction.reactants[1].label = products[0].label
+                            reaction.products[0].label = products[1].label
+                elif len(products) == len(products0):
+                    raise NotImplementedError("Can't yet filter reactions with {} products".format(len(products)))
+                    
+                if match: 
+                    rxnList.append(reaction)
             
         # This reaction list has only checked for duplicates within itself, not
         # with the global list of reactions
