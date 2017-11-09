@@ -1668,7 +1668,6 @@ class KineticsFamily(Database):
 
             rxnList0 = rxnList[:]
             rxnList = []
-            index = 0
             for reaction in rxnList0:
             
                 products0 = reaction.products if forward else reaction.reactants
