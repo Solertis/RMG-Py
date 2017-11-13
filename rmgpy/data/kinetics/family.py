@@ -1701,26 +1701,26 @@ class KineticsFamily(Database):
                     if products[0].isIsomorphic(products0[0]):
                         match = True
                         if forward:
-                            reaction.products[0].label = products[0].label
+                            reaction.products[0].props['label'] = products[0].label
                         else:
-                            reaction.reactants[0].label = products[0].label
+                            reaction.reactants[0].props['label'] = products[0].label
                 elif len(products) == len(products0) == 2:
                     if products[0].isIsomorphic(products0[0]) and products[1].isIsomorphic(products0[1]):
                         match = True
                         if forward:
-                            reaction.products[0].label = products[0].label
-                            reaction.products[1].label = products[1].label
+                            reaction.products[0].props['label'] = products[0].label
+                            reaction.products[1].props['label'] = products[1].label
                         else:
-                            reaction.reactants[0].label = products[0].label
-                            reaction.products[1].label = products[1].label
+                            reaction.reactants[0].props['label'] = products[0].label
+                            reaction.products[1].props['label'] = products[1].label
                     elif products[0].isIsomorphic(products0[1]) and products[1].isIsomorphic(products0[0]):
                         match = True
                         if forward:
-                            reaction.products[1].label = products[0].label
-                            reaction.products[0].label = products[1].label
+                            reaction.products[1].props['label'] = products[0].label
+                            reaction.products[0].props['label'] = products[1].label
                         else:
-                            reaction.reactants[1].label = products[0].label
-                            reaction.products[0].label = products[1].label
+                            reaction.reactants[1].props['label'] = products[0].label
+                            reaction.products[0].props['label'] = products[1].label
                 elif len(products) == len(products0):
                     raise NotImplementedError("Can't yet filter reactions with {} products".format(len(products)))
                     
