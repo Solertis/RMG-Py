@@ -227,7 +227,6 @@ For example:
 - N3d is nitrogen with valence=3 (i.e., 3 electronce are able to form bonds or remain as radicals) with one double bond
 - S2tc is a charged sulful with valence=2 with a triple bonds
 - Oa is atomic oxygen, i.e., a closed shell atom
-- O2sn is a negatively charged oxygen with valence=2
 Some charged atom types were merged together, and are marked as '*Composite atomType'
 """
 
@@ -237,9 +236,9 @@ atomTypes['R']    = AtomType(label='R', generic=[], specific=[
     'R!H',
     'Val4','Val5','Val6','Val7',    
     'He',
-    'C','Ca','Cs','Csc','Cd','CO','CS','Cdd','Cdc','Ct','Ctc','Cb','Cbf','C2s','C2sc','C2d','C2dc','C2tc',
-    'N','N0sc','N1s','N1sc','N1dc','N3s','N3sc','N3d','N3dc','N3t','N3tdc','N3b','N5sc','N5d','N5dc','N5dd','N5ddc','N5dddc','N5t','N5tc','N5td','N5tdc','N5b','N5bd',
-    'O','Oa','O0sc','O2s','O2sp','O2sn','O2d','O2dc','O2tc','O4sc','O4dc','O4tc','O4b',
+    'C','Ca','Cs','Csc','Cd','CO','CS','Cdd','Cdc','Ct','Cb','Cbf','C2s','C2sc','C2d','C2dc','C2tc',
+    'N','N0sc','N1s','N1sc','N1dc','N3s','N3sc','N3d','N3t','N3b','N5sc','N5dc','N5ddc','N5dddc','N5t','N5tc','N5b','N5bd',
+    'O','Oa','O0sc','O2s','O2sc','O2d','O4sc','O4dc','O4tc','O4b',
     'Ne',
     'Si','Sis','Sid','Sidd','Sit','SiO','Sib','Sibf',
     'S','Sa','S0sc','S2s','S2sc','S2d','S2dc','S2tc','S4s','S4sc','S4d','S4dd','S4dc','S4b','S4t','S4tdc','S6s','S6sc','S6d','S6dd','S6ddd','S6dc','S6t','S6td','S6tt','S6tdc',
@@ -248,23 +247,23 @@ atomTypes['R']    = AtomType(label='R', generic=[], specific=[
 atomTypes['R!H']  = AtomType(label='R!H', generic=['R'], specific=[
     'He',
     'Val4','Val5','Val6','Val7',
-    'C','Ca','Cs','Csc','Cd','CO','CS','Cdd','Cdc','Ct','Ctc','Cb','Cbf','C2s','C2sc','C2d','C2dc','C2tc',
-    'N','N0sc','N1s','N1sc','N1dc','N3s','N3sc','N3d','N3dc','N3t','N3tdc','N3b','N5sc','N5d','N5dc','N5dd','N5ddc','N5dddc','N5t','N5tc','N5td','N5tdc','N5b','N5bd',
-    'O','Oa','O0sc','O2s','O2sp','O2sn','O2d','O2dc','O2tc','O4sc','O4dc','O4tc','O4b',
+    'C','Ca','Cs','Csc','Cd','CO','CS','Cdd','Cdc','Ct','Cb','Cbf','C2s','C2sc','C2d','C2dc','C2tc',
+    'N','N0sc','N1s','N1sc','N1dc','N3s','N3sc','N3d','N3t','N3b','N5sc','N5dc','N5ddc','N5dddc','N5t','N5tc','N5b','N5bd',
+    'O','Oa','O0sc','O2s','O2sc','O2d','O4sc','O4dc','O4tc','O4b',
     'Ne',
     'Si','Sis','Sid','Sidd','Sit','SiO','Sib','Sibf',
     'S','Sa','S0sc','S2s','S2sc','S2d','S2dc','S2tc','S4s','S4sc','S4d','S4dd','S4dc','S4b','S4t','S4tdc','S6s','S6sc','S6d','S6dd','S6ddd','S6dc','S6t','S6td','S6tt','S6tdc',
     'Cl','Ar'])
 
 atomTypes['Val4'] = AtomType(label='Val4', generic=['R','R!H'], specific=[
-    'C','Ca','Cs','Csc','Cd','CO','CS','Cdd','Cdc','Ct','Ctc','Cb','Cbf','C2s','C2sc','C2d','C2dc','C2tc',
+    'C','Ca','Cs','Csc','Cd','CO','CS','Cdd','Cdc','Ct','Cb','Cbf','C2s','C2sc','C2d','C2dc','C2tc',
     'Si','Sis','Sid','Sidd','Sit','SiO','Sib','Sibf'])
 
 atomTypes['Val5'] = AtomType(label='Val5', generic=['R','R!H'], specific=[
-    'N','N0sc','N1s','N1sc','N1dc','N3s','N3sc','N3d','N3dc','N3t','N3tdc','N3b','N5sc','N5d','N5dc','N5dd','N5ddc','N5dddc','N5t','N5tc','N5td','N5tdc','N5b','N5bd'])
+    'N','N0sc','N1s','N1sc','N1dc','N3s','N3sc','N3d','N3t','N3b','N5sc','N5dc','N5ddc','N5dddc','N5t','N5tc','N5b','N5bd'])
 
 atomTypes['Val6'] = AtomType(label='Val6', generic=['R','R!H'], specific=[
-    'O','Oa','O0sc','O2s','O2sp','O2sn','O2d','O2dc','O2tc','O4sc','O4dc','O4tc','O4b',
+    'O','Oa','O0sc','O2s','O2sc','O2d','O4sc','O4dc','O4tc','O4b',
     'S','Sa','S0sc','S2s','S2sc','S2d','S2dc','S2tc','S4s','S4sc','S4d','S4dd','S4dc','S4b','S4t','S4tdc','S6s','S6sc','S6d','S6dd','S6ddd','S6dc','S6t','S6td','S6tt','S6tdc'])
 
 atomTypes['Val7'] = AtomType(label='Val7', generic=['R','R!H'], specific=[
@@ -274,124 +273,104 @@ atomTypes['H'   ] = AtomType('H',    generic=['R'],            specific=[])
 
 atomTypes['He'  ] = AtomType('He',  generic=['R','R!H'],      specific=[])
 
-atomTypes['C'   ] = AtomType('C',    generic=['R','R!H','Val4'],      specific=['Ca','Cs','Csc','Cd','CO','CS','Cdd','Cdc','Ct','Ctc','Cb','Cbf','C2s','C2sc','C2d','C2dc','C2tc'],
+atomTypes['C'   ] = AtomType('C',    generic=['R','R!H','Val4'],      specific=['Ca','Cs','Csc','Cd','CO','CS','Cdd','Cdc','Ct','Cb','Cbf','C2s','C2sc','C2d','C2dc','C2tc'],
                              single=[], allDouble=[], rDouble=[], oDouble=[], sDouble=[], triple=[], benzene=[], lonePairs=[], charge=[])
-atomTypes['Ca'  ] = AtomType('Ca',   generic=['R','R!H','C','Val4'],  specific=[],
+atomTypes['Ca'  ] = AtomType('Ca',   generic=['R','R!H','C','Val4'],  specific=[],  # (shared electrons = 4)
                              single=[0], allDouble=[0], rDouble=[], oDouble=[], sDouble=[], triple=[0], benzene=[0], lonePairs=[2], charge=[0])
 # examples for Ca: atomic carbon (closed shell)
-atomTypes['Cs'  ] = AtomType('Cs',   generic=['R','R!H','C','Val4'],  specific=[],
+atomTypes['Cs'  ] = AtomType('Cs',   generic=['R','R!H','C','Val4'],  specific=[],  # (shared electrons = 4-8)
                              single=[0,1,2,3,4], allDouble=[0], rDouble=[0], oDouble=[0], sDouble=[0], triple=[0], benzene=[0], lonePairs=[0], charge=[0])
-# examples for Cs: C, CC, C1=CCC([O-])[CH+]1
-atomTypes['Csc' ] = AtomType('Csc',  generic=['R','R!H','C','Val4'],  specific=[],
-                             single=[0,1,2,3,4,5], allDouble=[0], rDouble=[], oDouble=[], sDouble=[], triple=[0], benzene=[0], lonePairs=[0], charge=[-1,+1])
-# examples for Csc: [CH4-][N+]#N
-atomTypes['Cd'  ] = AtomType('Cd',   generic=['R','R!H','C','Val4'],  specific=[],
+# examples for Cs: C, CC,
+atomTypes['Csc' ] = AtomType('Csc',  generic=['R','R!H','C','Val4'],  specific=[],  # (shared electrons = 3-6)
+                             single=[0,1,2,3], allDouble=[0], rDouble=[], oDouble=[], sDouble=[], triple=[0], benzene=[0], lonePairs=[0], charge=[+1])
+# examples for Csc: C1=CCC([O-])[CH+]1, O[O+]=C[C+]C([O-])[O-]
+atomTypes['Cd'  ] = AtomType('Cd',   generic=['R','R!H','C','Val4'],  specific=[],  # (shared electrons = 6-8)
                              single=[0,1,2], allDouble=[1], rDouble=[1], oDouble=[0], sDouble=[0], triple=[0], benzene=[0], lonePairs=[0], charge=[0])
 # examples for Cd: C=C, C=N
-atomTypes['CO'  ] = AtomType('CO',   generic=['R','R!H','C','Val4'],  specific=[],
+atomTypes['Cdc' ] = AtomType('Cdc',  generic=['R','R!H','C','Val4'],  specific=[],  # (shared electrons = 6)
+                             single=[0,1], allDouble=[1], rDouble=[0,1], oDouble=[0,1], sDouble=[0,1], triple=[0], benzene=[0], lonePairs=[0], charge=[+1])
+# examples for Cdc: [CH+]=C=[CH-], [CH+]=N[O-] (one of the res structures of Fulminic acid)
+atomTypes['CO'  ] = AtomType('CO',   generic=['R','R!H','C','Val4'],  specific=[],  # (shared electrons = 6-8)
                              single=[0,1,2], allDouble=[1], rDouble=[0], oDouble=[1], sDouble=[0], triple=[0], benzene=[0], lonePairs=[0], charge=[0])
 # examples for CO: C=O
-atomTypes['CS'  ] = AtomType('CS',   generic=['R','R!H','C','Val4'],  specific=[],
+atomTypes['CS'  ] = AtomType('CS',   generic=['R','R!H','C','Val4'],  specific=[],  # (shared electrons = 6-8)
                              single=[0,1,2], allDouble=[1], rDouble=[0], oDouble=[0], sDouble=[1], triple=[0], benzene=[0], lonePairs=[0], charge=[0])
 # examples for CS: C=S
-atomTypes['Cdd' ] = AtomType('Cdd',  generic=['R','R!H','C','Val4'],  specific=[],
+atomTypes['Cdd' ] = AtomType('Cdd',  generic=['R','R!H','C','Val4'],  specific=[],  # (shared electrons = 8)
                              single=[0], allDouble=[2], rDouble=[0,1,2], oDouble=[0,1,2], sDouble=[0,1,2], triple=[0], benzene=[0], lonePairs=[0], charge=[0])
 # examples for Cdd: O=C=O, C=C=C
-atomTypes['Cdc' ] = AtomType('Cdc',  generic=['R','R!H','C','Val4'],  specific=[],
-                             single=[0,1,2,3], allDouble=[1,2], rDouble=[0,1,2], oDouble=[0,1,2], sDouble=[0,1,2], triple=[0], benzene=[0], lonePairs=[0], charge=[-1,+1])
-# examples for Cdc: O=[CH2-][N+]#N
-atomTypes['Ct'  ] = AtomType('Ct',   generic=['R','R!H','C','Val4'],  specific=[],
+atomTypes['Ct'  ] = AtomType('Ct',   generic=['R','R!H','C','Val4'],  specific=[],  # (shared electrons = 7-8)
                              single=[0,1], allDouble=[0], rDouble=[], oDouble=[], sDouble=[], triple=[1], benzene=[0], lonePairs=[0], charge=[0])
 # examples for Ct: C#C, C#N
-atomTypes['Ctc' ] = AtomType('Ctc',  generic=['R','R!H','C','Val4'],  specific=[],
-                             single=[0,1,2], allDouble=[0], rDouble=[], oDouble=[], sDouble=[], triple=[1], benzene=[0], lonePairs=[0], charge=[-1,+1])
-# examples for Ctc: [CH2-]#[NH+]
 atomTypes['Cb'  ] = AtomType('Cb',   generic=['R','R!H','C','Val4'],  specific=[],
                              single=[0,1], allDouble=[0], rDouble=[], oDouble=[], sDouble=[], triple=[0], benzene=[1,2], lonePairs=[], charge=[])
 # examples for Cb: benzene (C6H6)
 atomTypes['Cbf' ] = AtomType('Cbf',  generic=['R','R!H','C','Val4'],  specific=[],
                              single=[0], allDouble=[0], rDouble=[], oDouble=[], sDouble=[], triple=[0], benzene=[3], lonePairs=[], charge=[])
 # examples for Cbf: Naphthalene
-atomTypes['C2s' ] = AtomType('C2s',  generic=['R','R!H','C','Val4'],  specific=[],
+atomTypes['C2s' ] = AtomType('C2s',  generic=['R','R!H','C','Val4'],  specific=[],  # (shared electrons = 4-6)
                              single=[0,1,2], allDouble=[0], rDouble=[], oDouble=[], sDouble=[], triple=[0], benzene=[0], lonePairs=[1], charge=[0])
 # examples for C2s: singlet[CH2]
-atomTypes['C2sc'] = AtomType('C2sc', generic=['R','R!H','C','Val4'],  specific=[],
+atomTypes['C2sc'] = AtomType('C2sc', generic=['R','R!H','C','Val4'],  specific=[],  # (shared electrons = 5-8)
                              single=[0,1,2,3], allDouble=[0], rDouble=[], oDouble=[], sDouble=[], triple=[0], benzene=[0], lonePairs=[1], charge=[-1])
 # examples for C2sc: [CH2-][N+]#N
-atomTypes['C2d' ] = AtomType('C2d',  generic=['R','R!H','C','Val4'],  specific=[],
+atomTypes['C2d' ] = AtomType('C2d',  generic=['R','R!H','C','Val4'],  specific=[],  # (shared electrons = 6)
                              single=[0], allDouble=[1], rDouble=[], oDouble=[], sDouble=[], triple=[0], benzene=[0], lonePairs=[1], charge=[0])
 # examples for C2d: singlet[C]=C
-atomTypes['C2dc'] = AtomType('C2dc', generic=['R','R!H','C','Val4'],  specific=[],
+atomTypes['C2dc'] = AtomType('C2dc', generic=['R','R!H','C','Val4'],  specific=[],  # (shared electrons = 7-8)
                              single=[0,1], allDouble=[1], rDouble=[], oDouble=[], sDouble=[], triple=[0], benzene=[0], lonePairs=[1], charge=[-1])
-# examples for C2dc: C=[C-][N+]#N, [CH-]=[N+]=O
-atomTypes['C2tc'] = AtomType('C2tc',  generic=['R','R!H','C','Val4'],  specific=[],
+# examples for C2dc: C=[C-][N+]#N, [CH-]=[N+]=O, [CH+]=C=[CH-]
+atomTypes['C2tc'] = AtomType('C2tc',  generic=['R','R!H','C','Val4'],  specific=[],  # (shared electrons = 8)
                              single=[0], allDouble=[0], rDouble=[], oDouble=[], sDouble=[], triple=[1], benzene=[0], lonePairs=[1], charge=[-1])
 # examples for C2tc: [C-]#[O+]
 
-atomTypes['N'   ] = AtomType('N',    generic=['R','R!H','Val5'],      specific=['N0sc','N1s','N1sc','N1dc','N3s','N3sc','N3d','N3dc','N3t','N3tdc','N3b','N5sc','N5d','N5dc','N5dd','N5ddc','N5dddc','N5t','N5tc','N5td','N5tdc','N5b','N5bd'],
+atomTypes['N'   ] = AtomType('N',    generic=['R','R!H','Val5'],      specific=['N0sc','N1s','N1sc','N1dc','N3s','N3sc','N3d','N3t','N3b','N5sc','N5dc','N5ddc','N5dddc','N5t','N5tc','N5b','N5bd'],
                              single=[], allDouble=[], rDouble=[], oDouble=[], sDouble=[], triple=[], benzene=[], lonePairs=[], charge=[])
-atomTypes['N0sc'] = AtomType('N0sc',  generic=['R','R!H','N','Val5'],  specific=[],
+atomTypes['N0sc'] = AtomType('N0sc',  generic=['R','R!H','N','Val5'],  specific=[],  # (shared electrons = 7-8)
                              single=[0,1], allDouble=[0], rDouble=[0], oDouble=[0], sDouble=[0], triple=[0], benzene=[0], lonePairs=[3], charge=[-2])
 # examples for N0sc: [NH+]#[N+][N-2] with adjList 1 N u0 p0 c+1 {2,S} {3,T}; 2 H u0 p0 c0 {1,S}; 3 N u0 p0 c+1 {1,T} {4,S}; 4 N u0 p3 c-2 {3,S}
-atomTypes['N1s' ] = AtomType('N1s',  generic=['R','R!H','N','Val5'],  specific=[],
+atomTypes['N1s' ] = AtomType('N1s',  generic=['R','R!H','N','Val5'],  specific=[],  # (shared electrons = 5-6)
                              single=[0,1], allDouble=[0], rDouble=[0], oDouble=[0], sDouble=[0], triple=[0], benzene=[0], lonePairs=[2], charge=[0])
 # examples for N1s: closed shell N-N, closed shell NH
-atomTypes['N1sc'] = AtomType('N1sc',  generic=['R','R!H','N','Val5'],  specific=[],
+atomTypes['N1sc'] = AtomType('N1sc',  generic=['R','R!H','N','Val5'],  specific=[],  # (shared electrons = 6-8)
                              single=[0,1,2], allDouble=[0], rDouble=[], oDouble=[], sDouble=[], triple=[0], benzene=[0], lonePairs=[2], charge=[-1])
 # examples for N1sc: [NH-][S+]=C, [NH-][N+]#C
-atomTypes['N1dc'] = AtomType('N1dc',  generic=['R','R!H','N','Val5'],  specific=[],
+atomTypes['N1dc'] = AtomType('N1dc',  generic=['R','R!H','N','Val5'],  specific=[],  # (shared electrons = 8)
                              single=[0], allDouble=[1], rDouble=[], oDouble=[], sDouble=[], triple=[0], benzene=[0], lonePairs=[2], charge=[-1])
-# examples for N1dc: [N-]=[N+]=N terminal nitrogen on azide (two lone pairs), [N-]=[NH+]
-atomTypes['N3s' ] = AtomType('N3s',  generic=['R','R!H','N','Val5'],  specific=[],
+# examples for N1dc: [N-]=[N+]=N terminal nitrogen on azide (two lone pairs), [N-]=[NH+], [N-]=[SH+]
+atomTypes['N3s' ] = AtomType('N3s',  generic=['R','R!H','N','Val5'],  specific=[],  # (shared electrons = 5-8)
                              single=[0,1,2,3], allDouble=[0], rDouble=[0], oDouble=[0], sDouble=[0], triple=[0], benzene=[0], lonePairs=[1], charge=[0])
 # examples for N3s: NH3, NH2, NH, N, C[NH]...
-atomTypes['N3sc'] = AtomType('N3sc', generic=['R','R!H','N','Val5'],  specific=[],
-                             single=[0,1,2,3], allDouble=[0], rDouble=[0], oDouble=[0], sDouble=[0], triple=[0], benzene=[0], lonePairs=[1], charge=[+1,+2])
-# examples for N3sc: [NH2+]N([O-])(=O)=O
-atomTypes['N3d' ] = AtomType('N3d',  generic=['R','R!H','N','Val5'],  specific=[],
+atomTypes['N3sc'] = AtomType('N3sc', generic=['R','R!H','N','Val5'],  specific=[],  # (shared electrons = 4-6)
+                             single=[0,1,2], allDouble=[0], rDouble=[0], oDouble=[0], sDouble=[0], triple=[0], benzene=[0], lonePairs=[1], charge=[+1])
+# examples for N3sc: !! N3sc should eventually be deleted, see #1206
+atomTypes['N3d' ] = AtomType('N3d',  generic=['R','R!H','N','Val5'],  specific=[],  # (shared electrons = 7-8)
                              single=[0,1], allDouble=[1], rDouble=[], oDouble=[], sDouble=[], triple=[0], benzene=[0], lonePairs=[1], charge=[0])
 # examples for N3d: N=O, N=N, C=N, [O]N=O, [N]=O, [N]=C
-atomTypes['N3dc'] = AtomType('N3dc', generic=['R','R!H','N','Val5'],  specific=[],
-                             single=[0,1,2], allDouble=[1,2], rDouble=[], oDouble=[], sDouble=[], triple=[0], benzene=[0], lonePairs=[1], charge=[-1,+1])
-# *Composite atomType; examples for N3dc: [NH-]=[SH+], [N+]=[S-]=O, C=[N-]=[SH+]
-atomTypes['N3t' ] = AtomType('N3t',  generic=['R','R!H','N','Val5'],  specific=[],
+atomTypes['N3t' ] = AtomType('N3t',  generic=['R','R!H','N','Val5'],  specific=[],  # (shared electrons = 8)
                              single=[0], allDouble=[0], rDouble=[0], oDouble=[0], sDouble=[0], triple=[1], benzene=[0], lonePairs=[1], charge=[0])
 # examples for N3t: N2, N#C, N#[C], N#CC
-atomTypes['N3tdc'] = AtomType('N3tdc',generic=['R','R!H','N','Val5'],  specific=[],
-                             single=[0,1], allDouble=[0,1], rDouble=[], oDouble=[], sDouble=[], triple=[1], benzene=[0], lonePairs=[1], charge=[-1])
-# *Composite atomType; examples for N3tdc: [NH-]#[S+]
 atomTypes['N3b' ] = AtomType('N3b',  generic=['R','R!H','N','Val5'],  specific=[],
                              single=[0], allDouble=[0], rDouble=[0], oDouble=[0], sDouble=[0], triple=[0], benzene=[2], lonePairs=[1], charge=[0])
 # examples for N3b: Oxazole, Pyradine, Pyrazine, 1,3,5-Triazine, Benzimidazole, Purine
-atomTypes['N5sc'] = AtomType('N5sc',  generic=['R','R!H','N','Val5'],  specific=[],
+atomTypes['N5sc'] = AtomType('N5sc',  generic=['R','R!H','N','Val5'],  specific=[],  # (shared electrons = 4-8)
                              single=[0,1,2,3,4], allDouble=[0], rDouble=[0], oDouble=[0], sDouble=[0], triple=[0], benzene=[0], lonePairs=[0], charge=[+1,+2])
-# examples for N5sc: [NH4+], [NH2+][O-] {N has u1 p0}, [NH3+][O-], [NH2+2][N-2]
-atomTypes['N5d' ] = AtomType('N5d',   generic=['R','R!H','N','Val5'],  specific=[],
-                             single=[0,1,2,3], allDouble=[1], rDouble=[], oDouble=[], sDouble=[], triple=[0], benzene=[0], lonePairs=[0], charge=[0])
-# examples for N5d: [NH2]=N
-atomTypes['N5dc'] = AtomType('N5dc',  generic=['R','R!H','N','Val5'],  specific=[],
+# examples for N5sc: !! N5sc should eventually be deleted, see #1206   [NH4+], [NH3+][O-] {N has u1 p0}
+atomTypes['N5dc'] = AtomType('N5dc',  generic=['R','R!H','N','Val5'],  specific=[],  # (shared electrons = 6-8)
                              single=[0,1,2], allDouble=[1], rDouble=[], oDouble=[], sDouble=[], triple=[0], benzene=[0], lonePairs=[0], charge=[+1])
-# examples for N5dc: O[N+](=O)(O-) nitrate group, [N+](=O)(O)[O-], O=[N+][O-], [N+](=O)(O[N+](=O)[O-])[O-]
-atomTypes['N5dd'] = AtomType('N5dd',  generic=['R','R!H','N','Val5'],  specific=[],
-                             single=[0,1], allDouble=[2], rDouble=[], oDouble=[], sDouble=[], triple=[0], benzene=[0], lonePairs=[0], charge=[0])
-# examples for N5dd: ON(=O)=O
-atomTypes['N5ddc'] = AtomType('N5ddc', generic=['R','R!H','N','Val5'],  specific=[],
+# examples for N5dc: O[N+](=O)(O-) nitrate group, [N+](=O)(O)[O-], O=[N+][O-], [N+](=O)(O[N+](=O)[O-])[O-], C=[N+]=[SH-], [NH2+]=[SH-]
+atomTypes['N5ddc'] = AtomType('N5ddc', generic=['R','R!H','N','Val5'],  specific=[],  # (shared electrons = 8)
                              single=[0], allDouble=[2], rDouble=[], oDouble=[], sDouble=[], triple=[0], benzene=[0], lonePairs=[0], charge=[+1])
-# examples for N5ddc: N=[N+]=[N-] center nitrogen on azide, [N-]=[N+]=O
-atomTypes['N5dddc'] = AtomType('N5dddc', generic=['R','R!H','N','Val5'],  specific=[],
+# examples for N5ddc: N=[N+]=[N-] center nitrogen on azide, [N-]=[N+]=O, C=[N+]=[SH-]
+atomTypes['N5dddc'] = AtomType('N5dddc', generic=['R','R!H','N','Val5'],  specific=[],  # (shared electrons = 6)
                              single=[0], allDouble=[3], rDouble=[], oDouble=[], sDouble=[], triple=[0], benzene=[0], lonePairs=[0], charge=[-1])
-atomTypes['N5t' ] = AtomType('N5t',   generic=['R','R!H','N','Val5'],  specific=[],
+# examples for N5dddc: C=[N-](=C)=[NH2+]
+atomTypes['N5t' ] = AtomType('N5t',   generic=['R','R!H','N','Val5'],  specific=[],  # (shared electrons = 8-10)
                              single=[0,1,2], allDouble=[0], rDouble=[0], oDouble=[0], sDouble=[0], triple=[1], benzene=[0], lonePairs=[0], charge=[0])
 # examples for N5t: C#[NH2]
-atomTypes['N5tc'] = AtomType('N5tc',  generic=['R','R!H','N','Val5'],  specific=[],
+atomTypes['N5tc'] = AtomType('N5tc',  generic=['R','R!H','N','Val5'],  specific=[],  # (shared electrons = 7-8)
                              single=[0,1], allDouble=[0], rDouble=[0], oDouble=[0], sDouble=[0], triple=[1], benzene=[0], lonePairs=[0], charge=[+1])
-# examples for N5tc: C[N+]#[C-] isocyano group, N#[N+][O-], [NH+]#[C-] (note that C- has p1 here), [N+]#[C-] (note that C- has p1 here), [O-][N+]#C, C[N+]#[C-] (note that C- has p1 here)
-atomTypes['N5td'] = AtomType('N5td',  generic=['R','R!H','N','Val5'],  specific=[],
-                             single=[0], allDouble=[1], rDouble=[], oDouble=[], sDouble=[], triple=[1], benzene=[0], lonePairs=[0], charge=[0])
-# examples for N5td: N#N=O
-atomTypes['N5tdc'] = AtomType('N5tdc', generic=['R','R!H','N','Val5'],  specific=[],
-                             single=[0,1,2,3], allDouble=[0,1,2], rDouble=[], oDouble=[], sDouble=[], triple=[1,2], benzene=[0], lonePairs=[0], charge=[-1])
-# *Composite atomType; examples for N5tdc: [NH+]#[NH-]=O
+# examples for N5tc: C[N+]#[C-] isocyano group, N#[N+][O-], [NH+]#[C-] (note that C- has p1 here), [N+]#[C-] (note that C- has p1 here), [O-][N+]#C (one of the res structures of Fulminic acid), C[N+]#[C-] (note that C- has p1 here)
 atomTypes['N5b' ] = AtomType('N5b',  generic=['R','R!H','N','Val5'],  specific=[],
                              single=[0,1], allDouble=[0], rDouble=[0], oDouble=[0], sDouble=[0], triple=[0], benzene=[2], lonePairs=[0], charge=[0,+1])
 # examples for N5b: Pyrrole, Indole, Benzimidazole, Purine; Note that this is the only N atomType with valence 5 which isn't necessarily charged.
@@ -399,39 +378,30 @@ atomTypes['N5bd'] = AtomType('N5bd',  generic=['R','R!H','N','Val5'],  specific=
                              single=[0], allDouble=[1], rDouble=[], oDouble=[], sDouble=[], triple=[0], benzene=[2], lonePairs=[0], charge=[0])
 # examples for N5bd: AdjList """1 N u0 p0 c0 {2,B} {6,B} {7,D} 2 C u0 p0 {1,B} {3,B} {8,S} 3 C u0 p0 {2,B} {4,B} {9,S} 4 C u0 p0 {3,B} {5,B} {10,S} 5 C u0 p0 {4,B} {6,B} {11,S} 6 N u0 p1 {1,B} {5,B} 7 O u0 p2 c0 {1,D} 8 H u0 p0 {2,S} 9 H u0 p0 {3,S} 10 H u0 p0 {4,S} 11 H u0 p0 {5,S}"""
 
-atomTypes['O'   ] = AtomType('O',    generic=['R','R!H','Val6'],      specific=['Oa','O0sc','O2s','O2sp','O2sn','O2d','O2dc','O2tc','O4sc','O4dc','O4tc','O4b'],
+atomTypes['O'   ] = AtomType('O',    generic=['R','R!H','Val6'],      specific=['Oa','O0sc','O2s','O2sc','O2d','O4sc','O4dc','O4tc','O4b'],
                              single=[], allDouble=[], rDouble=[], oDouble=[], sDouble=[], triple=[], benzene=[], lonePairs=[], charge=[])
-atomTypes['Oa'  ] = AtomType('Oa',   generic=['R','R!H','O','Val6'],  specific=[],
+atomTypes['Oa'  ] = AtomType('Oa',   generic=['R','R!H','O','Val6'],  specific=[],  # (shared electrons = 6)
                              single=[0], allDouble=[0], rDouble=[], oDouble=[], sDouble=[], triple=[0], benzene=[0], lonePairs=[3], charge=[0])
 # examples for Oa: atomic oxygen (closed shell)
-atomTypes['O0sc'] = AtomType('O0sc', generic=['R','R!H','O','Val6'],  specific=[],
+atomTypes['O0sc'] = AtomType('O0sc', generic=['R','R!H','O','Val6'],  specific=[],  # (shared electrons = 8)
                              single=[0,1], allDouble=[0], rDouble=[], oDouble=[], sDouble=[], triple=[0], benzene=[0], lonePairs=[3], charge=[-1])
 # examples for O0sc: Nitric acid O[N+](=O)([O-])
-atomTypes['O2s' ] = AtomType('O2s',  generic=['R','R!H','O','Val6'],  specific=[],
+atomTypes['O2s' ] = AtomType('O2s',  generic=['R','R!H','O','Val6'],  specific=[],  # (shared electrons = 8)
                              single=[0,1,2], allDouble=[0], rDouble=[], oDouble=[], sDouble=[], triple=[0], benzene=[0], lonePairs=[2], charge=[0])
 # examples for O2s: H2O, OH, CH3OH
-atomTypes['O2sp'] = AtomType('O2sp', generic=['R','R!H','O','Val6'],  specific=[],
+atomTypes['O2sc'] = AtomType('O2sc', generic=['R','R!H','O','Val6'],  specific=[],  # (shared electrons = 6)
                              single=[0,1], allDouble=[0], rDouble=[], oDouble=[], sDouble=[], triple=[0], benzene=[0], lonePairs=[2], charge=[+1])
-# examples for O2sp: C=[S-][O+]
-atomTypes['O2sn'] = AtomType('O2sn', generic=['R','R!H','O','Val6'],  specific=[],
-                             single=[0,1,2,3], allDouble=[0], rDouble=[], oDouble=[], sDouble=[], triple=[0], benzene=[0], lonePairs=[2], charge=[-1])
-# examples for O2sn: C=[NH+][OH2-]
-atomTypes['O2d' ] = AtomType('O2d',  generic=['R','R!H','O','Val6'],  specific=[],
+# examples for O2sc: C=[S-][O+]
+atomTypes['O2d' ] = AtomType('O2d',  generic=['R','R!H','O','Val6'],  specific=[],  # (shared electrons = 8)
                              single=[0], allDouble=[1], rDouble=[], oDouble=[], sDouble=[], triple=[0], benzene=[0], lonePairs=[2], charge=[0])
 # examples for O2d: CO2, CH2O
-atomTypes['O2dc'] = AtomType('O2dc', generic=['R','R!H','O','Val6'],  specific=[],
-                             single=[0,1], allDouble=[1], rDouble=[], oDouble=[], sDouble=[], triple=[0], benzene=[0], lonePairs=[2], charge=[-1])
-# examples for O2dc: O=[NH+][O-]=C
-atomTypes['O2tc'] = AtomType('O2tc', generic=['R','R!H','O','Val6'],  specific=[],
-                             single=[0], allDouble=[0], rDouble=[], oDouble=[], sDouble=[], triple=[1], benzene=[0], lonePairs=[2], charge=[-1])
-# examples for O2tc: [O-]#[NH+]
-atomTypes['O4sc'] = AtomType('O4sc', generic=['R','R!H','O','Val6'],  specific=[],
+atomTypes['O4sc'] = AtomType('O4sc', generic=['R','R!H','O','Val6'],  specific=[],  # (shared electrons = 5-8)
                              single=[0,1,2,3], allDouble=[0], rDouble=[], oDouble=[], sDouble=[], triple=[0], benzene=[0], lonePairs=[1], charge=[+1])
 # examples for O4sc: [O-][OH+]C
-atomTypes['O4dc'] = AtomType('O4dc', generic=['R','R!H','O','Val6'],  specific=[],
+atomTypes['O4dc'] = AtomType('O4dc', generic=['R','R!H','O','Val6'],  specific=[],  # (shared electrons = 7-8)
                              single=[0,1], allDouble=[1], rDouble=[], oDouble=[], sDouble=[], triple=[0], benzene=[0], lonePairs=[1], charge=[+1])
 # examples for O4dc: the positively charged O in ozone [O-][O+]=O
-atomTypes['O4tc'] = AtomType('O4tc',  generic=['R','R!H','O','Val6'],  specific=[],
+atomTypes['O4tc'] = AtomType('O4tc',  generic=['R','R!H','O','Val6'],  specific=[],  # (shared electrons = 8)
                              single=[0], allDouble=[0], rDouble=[], oDouble=[], sDouble=[], triple=[1], benzene=[0], lonePairs=[1], charge=[+1])
 # examples for O4tc: [C-]#[O+]
 atomTypes['O4b' ] = AtomType('O4b',  generic=['R','R!H','O','Val6'],  specific=[],
@@ -458,82 +428,81 @@ atomTypes['Sibf'] = AtomType('Sibf', generic=['R','R!H','Si','Val4'], specific=[
 
 atomTypes['S'   ] = AtomType('S',    generic=['R','R!H','Val6'],      specific=['Sa','S0sc','S2s','S2sc','S2d','S2dc','S2tc','S4s','S4sc','S4d','S4dd','S4dc','S4b','S4t','S4tdc','S6s','S6sc','S6d','S6dd','S6ddd','S6dc','S6t','S6td','S6tt','S6tdc'],
                              single=[], allDouble=[], rDouble=[], oDouble=[], sDouble=[], triple=[], benzene=[], lonePairs=[], charge=[])
-atomTypes['Sa'  ] = AtomType('Sa',   generic=['R','R!H','S','Val6'],  specific=[],
+atomTypes['Sa'  ] = AtomType('Sa',   generic=['R','R!H','S','Val6'],  specific=[],  # (shared electrons = 6)
                             single=[0], allDouble=[0], rDouble=[0], oDouble=[0], sDouble=[0], triple=[0], benzene=[0], lonePairs=[3], charge=[0])
 # examples for Sa: atomic sulfur (closed shell)
-atomTypes['S0sc'] = AtomType('S0sc', generic=['R','R!H','S','Val6'],  specific=[],
-                             single=[0,1], allDouble=[0,1], rDouble=[], oDouble=[], sDouble=[], triple=[0,1], benzene=[0], lonePairs=[3], charge=[-1])
+atomTypes['S0sc'] = AtomType('S0sc', generic=['R','R!H','S','Val6'],  specific=[],  # (shared electrons = 7-8)
+                             single=[0,1], allDouble=[0], rDouble=[], oDouble=[], sDouble=[], triple=[0,1], benzene=[0], lonePairs=[3], charge=[-1])
 # examples for S0sc: [S-][S+]=S
-atomTypes['S2s' ] = AtomType('S2s',  generic=['R','R!H','S','Val6'],  specific=[],
+atomTypes['S2s' ] = AtomType('S2s',  generic=['R','R!H','S','Val6'],  specific=[],  # (shared electrons = 6-8)
                              single=[0,1,2], allDouble=[0], rDouble=[0], oDouble=[0], sDouble=[0], triple=[0], benzene=[0], lonePairs=[2], charge=[0])
 # examples for S2s: [S], [SH], S {H2S}, [S][S], SS {H2S2}, SSC, CSSC, SO {HSOH}...
-atomTypes['S2sc'] = AtomType('S2sc', generic=['R','R!H','S','Val6'],  specific=[],
+atomTypes['S2sc'] = AtomType('S2sc', generic=['R','R!H','S','Val6'],  specific=[],  # (shared electrons = 7-10)
                             single=[0,1,2,3], allDouble=[0], rDouble=[0], oDouble=[0], sDouble=[0], triple=[0], benzene=[0], lonePairs=[2], charge=[-1,+1])
 # examples for S2sc: [S-][S+], N#[N+][S-](O)O
-atomTypes['S2d' ] = AtomType('S2d',  generic=['R','R!H','S','Val6'],  specific=[],
+atomTypes['S2d' ] = AtomType('S2d',  generic=['R','R!H','S','Val6'],  specific=[],  # (shared electrons = 8)
                              single=[0], allDouble=[1], rDouble=[], oDouble=[], sDouble=[], triple=[0], benzene=[0], lonePairs=[2], charge=[0])
 # examples for S2d: S=S, C=S, S=O, S=N, S=C=S, S=C=O, S=C=S...
 atomTypes['S2dc'] = AtomType('S2dc', generic=['R','R!H','S','Val6'],  specific=[],
                              single=[0,1], allDouble=[1,2], rDouble=[], oDouble=[], sDouble=[], triple=[0], benzene=[0], lonePairs=[2], charge=[-1])
 # *Composite atomType; examples for S2dc: [SH-]=[N+]
-atomTypes['S2tc'] = AtomType('S2tc', generic=['R','R!H','S','Val6'],  specific=[],
+atomTypes['S2tc'] = AtomType('S2tc', generic=['R','R!H','S','Val6'],  specific=[],  # (shared electrons = 10)
                              single=[0], allDouble=[0], rDouble=[], oDouble=[], sDouble=[], triple=[1], benzene=[0], lonePairs=[2], charge=[-1])
 # examples for S2tc: [S-]#[NH+]
-atomTypes['S4s' ] = AtomType('S4s',  generic=['R','R!H','S','Val6'],  specific=[],
+atomTypes['S4s' ] = AtomType('S4s',  generic=['R','R!H','S','Val6'],  specific=[],  # (shared electrons = 6-10)
                              single=[0,1,2,3,4], allDouble=[0], rDouble=[0], oDouble=[0], sDouble=[0], triple=[0], benzene=[0], lonePairs=[1], charge=[0])
 # examples for S4s: H4S, SH3CH3...
-atomTypes['S4sc'] = AtomType('S4sc', generic=['R','R!H','S','Val6'],  specific=[],
+atomTypes['S4sc'] = AtomType('S4sc', generic=['R','R!H','S','Val6'],  specific=[],  # (shared electrons = 5-8)
                              single=[0,1,2,3], allDouble=[0], rDouble=[0], oDouble=[0], sDouble=[0], triple=[0], benzene=[0], lonePairs=[1], charge=[+1])
 # examples for S4sc: CS[S+]([O-])C, [O-][S+2][O-]
-atomTypes['S4d' ] = AtomType('S4d',  generic=['R','R!H','S','Val6'],  specific=[],
+atomTypes['S4d' ] = AtomType('S4d',  generic=['R','R!H','S','Val6'],  specific=[],  # (shared electrons = 8-10)
                              single=[0,1,2], allDouble=[1], rDouble=[], oDouble=[], sDouble=[], triple=[0], benzene=[0], lonePairs=[1], charge=[0])
 # examples for S4d: O=S(O)O {Sulfurous acid}
-atomTypes['S4dd'] = AtomType('S4dd', generic=['R','R!H','S','Val6'],  specific=[],
+atomTypes['S4dd'] = AtomType('S4dd', generic=['R','R!H','S','Val6'],  specific=[],  # (shared electrons = 10)
                              single=[0], allDouble=[2], rDouble=[], oDouble=[], sDouble=[], triple=[0], benzene=[0], lonePairs=[1], charge=[0])
 # examples for S4dd: O=S=O
 atomTypes['S4dc'] = AtomType('S4dc', generic=['R','R!H','S','Val6'],  specific=[],
-                             single=[0,1,2,3], allDouble=[1,2,3], rDouble=[], oDouble=[], sDouble=[], triple=[0], benzene=[0], lonePairs=[1], charge=[-1,+1])
+                             single=[0,1,2,3], allDouble=[1,2], rDouble=[], oDouble=[], sDouble=[], triple=[0], benzene=[0], lonePairs=[1], charge=[-1,+1])
 # *Composite atomType; examples for S4dc: [CH2-][S+]=C {where the [CH2-] has a lone pair}, [O+][S-](=O)=O, [O-][S+]=C, [NH-][S+]=C {where the [NH-] has two lone pairs}, [O-][S+]=O
 atomTypes['S4b' ] = AtomType('S4b',  generic=['R','R!H','S','Val6'],  specific=[],
                              single=[0], allDouble=[0], rDouble=[0], oDouble=[0], sDouble=[0], triple=[0], benzene=[2], lonePairs=[1], charge=[0])
 # examples for S4b: Thiophene, Benzothiophene, Benzo[c]thiophene, Thiazole, Benzothiazole...
-atomTypes['S4t' ] = AtomType('S4t',  generic=['R','R!H','S','Val6'],  specific=[],
+atomTypes['S4t' ] = AtomType('S4t',  generic=['R','R!H','S','Val6'],  specific=[],  # (shared electrons = 10)
                              single=[0,1], allDouble=[0], rDouble=[0], oDouble=[0], sDouble=[0], triple=[1], benzene=[0], lonePairs=[1], charge=[0])
 # examples for S4t: C#S, C#SO, C#[S]
 atomTypes['S4tdc'] = AtomType('S4tdc',generic=['R','R!H','S','Val6'],  specific=[],
                              single=[0,1,2], allDouble=[0,1,2], rDouble=[], oDouble=[], sDouble=[], triple=[1,2], benzene=[0], lonePairs=[1], charge=[-1,+1])
 # *Composite atomType; examples for S4tdc: [C-]#[S+]
-atomTypes['S6s' ] = AtomType('S6s',  generic=['R','R!H','S','Val6'],  specific=[],
+atomTypes['S6s' ] = AtomType('S6s',  generic=['R','R!H','S','Val6'],  specific=[],  # (shared electrons = 6-12)
                              single=[0,1,2,3,4,5,6], allDouble=[0], rDouble=[0], oDouble=[0], sDouble=[0], triple=[0], benzene=[0], lonePairs=[0], charge=[0])
 # examples for S6s: H6S, F6S
-atomTypes['S6sc'] = AtomType('S6sc', generic=['R','R!H','S','Val6'],  specific=[],
+atomTypes['S6sc'] = AtomType('S6sc', generic=['R','R!H','S','Val6'],  specific=[],  # (shared electrons = 7-14)
                              single=[0,1,2,3,4,5,6,7], allDouble=[0], rDouble=[0], oDouble=[0], sDouble=[0], triple=[0], benzene=[0], lonePairs=[0], charge=[-1,+1])
 # examples for S6sc: O[SH3+][O-], [O-][S+3]([O-])[O-]
-atomTypes['S6d' ] = AtomType('S6d',  generic=['R','R!H','S','Val6'],  specific=[],
+atomTypes['S6d' ] = AtomType('S6d',  generic=['R','R!H','S','Val6'],  specific=[],  # (shared electrons = 8-12)
                              single=[0,1,2,3,4], allDouble=[1], rDouble=[], oDouble=[], sDouble=[], triple=[0], benzene=[0], lonePairs=[0], charge=[0])
 # examples for S6d: [SH4]=O, SF4=O, [SH4]=C, C[SH3]=C...
-atomTypes['S6dd'] = AtomType('S6dd', generic=['R','R!H','S','Val6'],  specific=[],
+atomTypes['S6dd'] = AtomType('S6dd', generic=['R','R!H','S','Val6'],  specific=[],  # (shared electrons = 10-12)
                              single=[0,1,2], allDouble=[2], rDouble=[], oDouble=[], sDouble=[], triple=[0], benzene=[0], lonePairs=[0], charge=[0])
 # examples for S6dd: S(=O)(=O)(O)O {H2SO4, Sulfuric acid}, Perfluorooctanesulfonic acid, Pyrosulfuric acid, Thiosulfuric acid {middle S}, OS(=O)(=O)OOS(=O)(=O)O
-atomTypes['S6ddd'] = AtomType('S6ddd', generic=['R','R!H','S','Val6'],  specific=[],
+atomTypes['S6ddd'] = AtomType('S6ddd', generic=['R','R!H','S','Val6'],  specific=[],  # (shared electrons = 12)
                              single=[0], allDouble=[3], rDouble=[], oDouble=[], sDouble=[], triple=[0], benzene=[0], lonePairs=[0], charge=[0])
 # examples for S6ddd: O=S(=O)(=O)
 atomTypes['S6dc'] = AtomType('S6dc', generic=['R','R!H','S','Val6'],  specific=[],
                              single=[0,1,2,3,4,5], allDouble=[1,2,3], rDouble=[], oDouble=[], sDouble=[], triple=[0], benzene=[0], lonePairs=[0], charge=[-1,+1])
 # *Composite atomType; examples for S6dc: [CH-]=[SH3+], [CH-]=[SH2+]O, [CH-][SH2+], O=[S+](=O)[O-], [OH+]=[S-](=O)=O
-atomTypes['S6t' ] = AtomType('S6t', generic=['R','R!H','S','Val6'],  specific=[],
+atomTypes['S6t' ] = AtomType('S6t', generic=['R','R!H','S','Val6'],  specific=[],  # (shared electrons = 9-12)
                              single=[0,1,2,3], allDouble=[0], rDouble=[], oDouble=[], sDouble=[], triple=[1], benzene=[0], lonePairs=[0], charge=[0])
 # examples for S6t: H3S#N
-atomTypes['S6td'] = AtomType('S6td', generic=['R','R!H','S','Val6'],  specific=[],
+atomTypes['S6td'] = AtomType('S6td', generic=['R','R!H','S','Val6'],  specific=[],  # (shared electrons = 11-12)
                              single=[0,1], allDouble=[1], rDouble=[], oDouble=[], sDouble=[], triple=[1], benzene=[0], lonePairs=[0], charge=[0])
 # examples for S6td: HS(=O)#N
-atomTypes['S6tt'] = AtomType('S6tt', generic=['R','R!H','S','Val6'],  specific=[],
+atomTypes['S6tt'] = AtomType('S6tt', generic=['R','R!H','S','Val6'],  specific=[],  # (shared electrons = 12)
                              single=[0], allDouble=[0], rDouble=[], oDouble=[], sDouble=[], triple=[2], benzene=[0], lonePairs=[0], charge=[0])
 # examples for S6tt: N#S#N
 atomTypes['S6tdc'] = AtomType('S6tdc',generic=['R','R!H','S','Val6'],  specific=[],
                              single=[0,1,2,3,4], allDouble=[0,1,2], rDouble=[], oDouble=[], sDouble=[], triple=[1,2], benzene=[0], lonePairs=[0], charge=[-1,+1])
 # *Composite atomType; examples for S6tdc: [SH2+]#[C-], [N-]=[S+]#N
-
 
 atomTypes['Cl'  ] = AtomType('Cl',   generic=['R','R!H','Val7'],      specific=[])
 
@@ -556,57 +525,47 @@ atomTypes['Ca'  ].setActions(incrementBond=[],               decrementBond=[],  
 atomTypes['Cs'  ].setActions(incrementBond=['Cd','CO','CS'], decrementBond=[],               formBond=['Cs','Csc'],  breakBond=['Cs'],        incrementRadical=['Cs'],   decrementRadical=['Cs'],   incrementLonePair=['C2s'], decrementLonePair=['C2s'])
 atomTypes['Csc' ].setActions(incrementBond=['Cdc'],          decrementBond=[],               formBond=['Csc'],       breakBond=['Csc','Cs'],  incrementRadical=['Csc'],  decrementRadical=['Csc'],  incrementLonePair=['C2sc'],decrementLonePair=['C2sc'])
 atomTypes['Cd'  ].setActions(incrementBond=['Cdd','Ct','C2tc'],decrementBond=['Cs'],         formBond=['Cd','Cdc'],  breakBond=['Cd'],        incrementRadical=['Cd'],   decrementRadical=['Cd'],   incrementLonePair=['C2d'], decrementLonePair=[])
+atomTypes['Cdc' ].setActions(incrementBond=[],               decrementBond=['Csc'],          formBond=['Cdc'],       breakBond=['Cdc','Cd','CO','CS'],incrementRadical=['Cdc'],decrementRadical=['Cdc'],incrementLonePair=['C2dc'],decrementLonePair=[])
 atomTypes['CO'  ].setActions(incrementBond=['Cdd','C2tc'],   decrementBond=['Cs'],           formBond=['CO','Cdc'],  breakBond=['CO'],        incrementRadical=['CO'],   decrementRadical=['CO'],   incrementLonePair=['C2d'], decrementLonePair=[])
 atomTypes['CS'  ].setActions(incrementBond=['Cdd','C2tc'],   decrementBond=['Cs'],           formBond=['CS','Cdc'],  breakBond=['CS'],        incrementRadical=['CS'],   decrementRadical=['CS'],   incrementLonePair=['C2d'], decrementLonePair=[])
-atomTypes['Cdc' ].setActions(incrementBond=['Ctc'],          decrementBond=['Csc'],          formBond=['Cdc'],       breakBond=['Cdc','Cd','CO','CS'],incrementRadical=['Cdc'],decrementRadical=['Cdc'],incrementLonePair=['C2dc'],decrementLonePair=[])
 atomTypes['Cdd' ].setActions(incrementBond=[],               decrementBond=['Cd','CO','CS'], formBond=[],            breakBond=[],            incrementRadical=[],       decrementRadical=[],       incrementLonePair=[],      decrementLonePair=[])
-atomTypes['Ct'  ].setActions(incrementBond=[],               decrementBond=['Cd','CO','CS'], formBond=['Ct','Ctc'],  breakBond=['Ct'],        incrementRadical=['Ct'],   decrementRadical=['Ct'],   incrementLonePair=['C2tc'],decrementLonePair=[])
-atomTypes['Ctc' ].setActions(incrementBond=[],               decrementBond=['Cdc'],          formBond=['Ctc'],       breakBond=['Ctc','Ct'],   incrementRadical=['Ctc'],  decrementRadical=['Ctc'],  incrementLonePair=['C2tc'],decrementLonePair=[])
+atomTypes['Ct'  ].setActions(incrementBond=[],               decrementBond=['Cd','CO','CS'], formBond=['Ct'],        breakBond=['Ct'],        incrementRadical=['Ct'],   decrementRadical=['Ct'],   incrementLonePair=['C2tc'],decrementLonePair=[])
 atomTypes['Cb'  ].setActions(incrementBond=['Cbf'],          decrementBond=[],               formBond=['Cb'],        breakBond=['Cb'],        incrementRadical=['Cb'],   decrementRadical=['Cb'],   incrementLonePair=[],      decrementLonePair=[])
 atomTypes['Cbf' ].setActions(incrementBond=[],               decrementBond=['Cb'],           formBond=[],            breakBond=['Cb'],        incrementRadical=[],       decrementRadical=[],       incrementLonePair=[],      decrementLonePair=[])
 atomTypes['C2s' ].setActions(incrementBond=['C2d'],          decrementBond=[],               formBond=['C2s'],       breakBond=['C2s'],       incrementRadical=['C2s'],  decrementRadical=['C2s'],  incrementLonePair=['Ca'],  decrementLonePair=['Cs'])
 atomTypes['C2sc'].setActions(incrementBond=['C2dc'],         decrementBond=[],               formBond=['C2sc'],      breakBond=['C2sc'],      incrementRadical=['C2sc'], decrementRadical=['C2sc'], incrementLonePair=[],      decrementLonePair=['Cs'])
 atomTypes['C2d' ].setActions(incrementBond=['C2tc'],         decrementBond=['C2s'],          formBond=['C2dc'],      breakBond=[],            incrementRadical=[],       decrementRadical=[],       incrementLonePair=[],      decrementLonePair=['Cd','CO','CS'])
 atomTypes['C2dc'].setActions(incrementBond=[],               decrementBond=['C2sc'],         formBond=[],            breakBond=['C2d'],       incrementRadical=[],       decrementRadical=[],       incrementLonePair=[],      decrementLonePair=['Cdc'])
-atomTypes['C2tc'].setActions(incrementBond=[],               decrementBond=['C2d'],          formBond=[],            breakBond=[],            incrementRadical=[],       decrementRadical=[],       incrementLonePair=[],      decrementLonePair=['Ct','Ctc'])
+atomTypes['C2tc'].setActions(incrementBond=[],               decrementBond=['C2d'],          formBond=[],            breakBond=[],            incrementRadical=[],       decrementRadical=[],       incrementLonePair=[],      decrementLonePair=['Ct'])
 
 atomTypes['N'   ].setActions(incrementBond=['N'],            decrementBond=['N'],            formBond=['N'],         breakBond=['N'],         incrementRadical=['N'],    decrementRadical=['N'],    incrementLonePair=['N'],   decrementLonePair=['N'])
 atomTypes['N0sc'].setActions(incrementBond=[],               decrementBond=[],               formBond=['N0sc'],      breakBond=['N0sc'],      incrementRadical=['N0sc'], decrementRadical=['N0sc'], incrementLonePair=[],      decrementLonePair=['N1s','N1sc'])
 atomTypes['N1s' ].setActions(incrementBond=['N1dc'],         decrementBond=[],               formBond=['N1s'],       breakBond=['N1s'],       incrementRadical=['N1s'],  decrementRadical=['N1s'],  incrementLonePair=['N0sc'],decrementLonePair=['N3s','N3sc'])
 atomTypes['N1sc'].setActions(incrementBond=[],               decrementBond=[],               formBond=['N1sc'],      breakBond=['N1sc'],      incrementRadical=['N1sc'], decrementRadical=['N1sc'], incrementLonePair=[],      decrementLonePair=['N3s','N3sc'])
-atomTypes['N1dc'].setActions(incrementBond=['N1dc'],         decrementBond=['N1s','N1dc'],   formBond=[],            breakBond=[],            incrementRadical=[],       decrementRadical=[],       incrementLonePair=[],      decrementLonePair=['N3d','N3dc'])
+atomTypes['N1dc'].setActions(incrementBond=['N1dc'],         decrementBond=['N1s','N1dc'],   formBond=[],            breakBond=[],            incrementRadical=[],       decrementRadical=[],       incrementLonePair=[],      decrementLonePair=['N3d'])
 atomTypes['N3s' ].setActions(incrementBond=['N3d'],          decrementBond=[],               formBond=['N3s'],       breakBond=['N3s'],       incrementRadical=['N3s'],  decrementRadical=['N3s'],  incrementLonePair=['N1s','N1sc'],decrementLonePair=['N5sc'])
-atomTypes['N3sc'].setActions(incrementBond=['N3dc','N3d'],   decrementBond=[],               formBond=['N3sc'],      breakBond=['N3sc'],      incrementRadical=['N3sc'], decrementRadical=['N3sc'], incrementLonePair=['N1s','N1sc'],decrementLonePair=['N5sc'])
+atomTypes['N3sc'].setActions(incrementBond=['N3d'],          decrementBond=[],               formBond=['N3sc'],      breakBond=['N3sc'],      incrementRadical=['N3sc'], decrementRadical=['N3sc'], incrementLonePair=['N1s','N1sc'],decrementLonePair=['N5sc'])
 atomTypes['N3d' ].setActions(incrementBond=['N3t'],          decrementBond=['N3s','N3sc'],   formBond=['N3d'],       breakBond=['N3d'],       incrementRadical=['N3d'],  decrementRadical=['N3d'],  incrementLonePair=['N1dc'],decrementLonePair=['N5dc'])
-atomTypes['N3dc'].setActions(incrementBond=['N3t','N3dc','N3tdc'],decrementBond=['N3s','N3sc','N3dc'],formBond=['N3dc'],breakBond=['N3dc'],   incrementRadical=['N3dc'], decrementRadical=['N3dc'], incrementLonePair=['N1dc'],decrementLonePair=['N5dc','N5ddc'])
 atomTypes['N3t' ].setActions(incrementBond=[],               decrementBond=['N3d'],          formBond=[],            breakBond=[],            incrementRadical=[],       decrementRadical=[],       incrementLonePair=[],      decrementLonePair=['N5t'])
-atomTypes['N3tdc'].setActions(incrementBond=['N3tdc'],       decrementBond=['N3dc','N3tdc'], formBond=['N3tdc'],     breakBond=['N3tdc'],     incrementRadical=['N3tdc'],decrementRadical=['N3tdc'],incrementLonePair=[],      decrementLonePair=['N5tc','N5tdc'])
 atomTypes['N3b' ].setActions(incrementBond=[],               decrementBond=[],               formBond=[],            breakBond=[],            incrementRadical=[],       decrementRadical=[],       incrementLonePair=[],      decrementLonePair=[])
 atomTypes['N5sc'].setActions(incrementBond=['N5dc'],         decrementBond=[],               formBond=['N5sc'],      breakBond=['N5sc'],      incrementRadical=['N5sc'], decrementRadical=['N5sc'], incrementLonePair=['N3s','N3sc'],decrementLonePair=[])
-atomTypes['N5d' ].setActions(incrementBond=['N5ddc','N5tc','N5dd'],decrementBond=['N5sc'],   formBond=['N5d'],       breakBond=['N5d'],       incrementRadical=['N5d'],  decrementRadical=['N5d'],  incrementLonePair=['N3d'], decrementLonePair=[])
-atomTypes['N5dc'].setActions(incrementBond=['N5ddc','N5tc','N5dd'],decrementBond=['N5sc'],   formBond=['N5dc'],      breakBond=['N5dc'],      incrementRadical=['N5dc'], decrementRadical=['N5dc'], incrementLonePair=['N3d','N3dc'],decrementLonePair=[])
-atomTypes['N5dd'].setActions(incrementBond=['N5td'],         decrementBond=['N5dc'],         formBond=['N5dd'],      breakBond=['N5dd'],      incrementRadical=['N5dd'], decrementRadical=['N5dd'], incrementLonePair=[],      decrementLonePair=[])
-atomTypes['N5ddc'].setActions(incrementBond=['N5tdc','N5dddc'],decrementBond=['N5dc'],       formBond=[],            breakBond=[],            incrementRadical=[],       decrementRadical=[],       incrementLonePair=['N3dc'],decrementLonePair=[])
-atomTypes['N5dddc'].setActions(incrementBond=['N5tdc'],      decrementBond=['N5ddc'],        formBond=[],            breakBond=[],            incrementRadical=[],       decrementRadical=[],       incrementLonePair=[],      decrementLonePair=[])
-atomTypes['N5t' ].setActions(incrementBond=['N5td'],         decrementBond=['N5d'],          formBond=['N5t'],       breakBond=['N5t'],       incrementRadical=['N5t'],  decrementRadical=['N5t'],  incrementLonePair=['N3t'], decrementLonePair=[])
-atomTypes['N5tc'].setActions(incrementBond=[],               decrementBond=['N5dc'],         formBond=['N5tc'],      breakBond=['N5tc'],      incrementRadical=['N5tc'], decrementRadical=['N5tc'], incrementLonePair=['N3tdc'],decrementLonePair=[])
-atomTypes['N5td'].setActions(incrementBond=[],               decrementBond=['N5dd','N5t'],   formBond=[],            breakBond=[],            incrementRadical=[],       decrementRadical=[],       incrementLonePair=[],      decrementLonePair=[])
-atomTypes['N5tdc'].setActions(incrementBond=['N5tdc'],       decrementBond=['N5ddc','N5dddc','N5tdc'],formBond=['N5tdc'],breakBond=['N5tdc'], incrementRadical=['N5tdc'],decrementRadical=['N5tdc'],incrementLonePair=['N3tdc'],decrementLonePair=[])
+atomTypes['N5dc'].setActions(incrementBond=['N5ddc','N5tc','N5t'],decrementBond=['N5sc'],    formBond=['N5dc'],      breakBond=['N5dc'],      incrementRadical=['N5dc'], decrementRadical=['N5dc'], incrementLonePair=['N3d'], decrementLonePair=[])
+atomTypes['N5ddc'].setActions(incrementBond=['N5dddc'],      decrementBond=['N5dc'],         formBond=[],            breakBond=[],            incrementRadical=[],       decrementRadical=[],       incrementLonePair=[],      decrementLonePair=[])
+atomTypes['N5dddc'].setActions(incrementBond=[],             decrementBond=['N5ddc'],        formBond=[],            breakBond=[],            incrementRadical=[],       decrementRadical=[],       incrementLonePair=[],      decrementLonePair=[])
+atomTypes['N5t' ].setActions(incrementBond=[],               decrementBond=['N5dc'],         formBond=['N5t'],       breakBond=['N5t'],       incrementRadical=['N5t'],  decrementRadical=['N5t'],  incrementLonePair=['N3t'], decrementLonePair=[])
+atomTypes['N5tc'].setActions(incrementBond=[],               decrementBond=['N5dc'],         formBond=['N5tc'],      breakBond=['N5tc'],      incrementRadical=['N5tc'], decrementRadical=['N5tc'], incrementLonePair=[],      decrementLonePair=[])
 atomTypes['N5b' ].setActions(incrementBond=['N5bd'],         decrementBond=[],               formBond=['N5b'],       breakBond=['N5b'],       incrementRadical=['N5b'],  decrementRadical=['N5b'],  incrementLonePair=[],      decrementLonePair=[])
 atomTypes['N5bd'].setActions(incrementBond=[],               decrementBond=['N5b'],          formBond=[],            breakBond=[],            incrementRadical=[],       decrementRadical=[],       incrementLonePair=[],      decrementLonePair=[])
 
 atomTypes['O'   ].setActions(incrementBond=['O'],            decrementBond=['O'],            formBond=['O'],         breakBond=['O'],         incrementRadical=['O'],    decrementRadical=['O'],    incrementLonePair=['O'],   decrementLonePair=['O'])
-atomTypes['Oa'  ].setActions(incrementBond=[],               decrementBond=[],               formBond=['O0sc'],      breakBond=[],            incrementRadical=[],       decrementRadical=[],       incrementLonePair=[],      decrementLonePair=['O2s','O2sn'])
-atomTypes['O0sc'].setActions(incrementBond=[],               decrementBond=[],               formBond=['O0sc'],      breakBond=['Oa','O0sc'], incrementRadical=[],       decrementRadical=[],       incrementLonePair=[],      decrementLonePair=['O2s','O2sn'])
-atomTypes['O2s' ].setActions(incrementBond=['O2d'],          decrementBond=[],               formBond=['O2s','O2sp','O2sn'],breakBond=['O2s'],incrementRadical=['O2s'],  decrementRadical=['O2s'],  incrementLonePair=['Oa','O0sc'],decrementLonePair=['O4sc'])
-atomTypes['O2sp'].setActions(incrementBond=['O2d'],          decrementBond=[],               formBond=[],            breakBond=['O2s'],       incrementRadical=['O2sp'], decrementRadical=['O2sp'], incrementLonePair=[],      decrementLonePair=['O4sc'])
-atomTypes['O2sn'].setActions(incrementBond=['O2dc'],         decrementBond=[],               formBond=['O2sn'],      breakBond=['O2s','O2sn'],incrementRadical=['O2sn'], decrementRadical=['O2sn'], incrementLonePair=['Oa','O0sc'],decrementLonePair=['O4sc'])
-atomTypes['O2d' ].setActions(incrementBond=['O4tc'],         decrementBond=['O2s','O2sp','O2d'],formBond=['O2dc'],   breakBond=[],            incrementRadical=['O2d'],  decrementRadical=['O2d'],  incrementLonePair=[],      decrementLonePair=['O4dc','O4tc'])
-atomTypes['O2dc'].setActions(incrementBond=['O2tc'],         decrementBond=['O2sn'],         formBond=['O2dc'],      breakBond=['O2d','O2dc'],incrementRadical=['O2dc'], decrementRadical=['O2dc'], incrementLonePair=[],      decrementLonePair=['O4dc','O4tc'])
-atomTypes['O2tc'].setActions(incrementBond=[],               decrementBond=['O2dc'],         formBond=[],            breakBond=[],            incrementRadical=[],       decrementRadical=[],       incrementLonePair=[],      decrementLonePair=['O4tc'])
-atomTypes['O4sc'].setActions(incrementBond=['O4dc'],         decrementBond=[],               formBond=['O4sc'],      breakBond=['O4sc'],      incrementRadical=['O4sc'], decrementRadical=['O4sc'], incrementLonePair=['O2s','O2sp'],decrementLonePair=[])
-atomTypes['O4dc'].setActions(incrementBond=['O4dc'],         decrementBond=['O4dc','O4sc'],  formBond=['O4dc'],      breakBond=['O4dc'],      incrementRadical=['O4dc'], decrementRadical=['O4dc'], incrementLonePair=['O2d','O2dc'],decrementLonePair=[])
-atomTypes['O4tc'].setActions(incrementBond=[],               decrementBond=['O2d'],          formBond=[],            breakBond=[],            incrementRadical=[],       decrementRadical=[],       incrementLonePair=['O2d','O2dc','O2tc'],decrementLonePair=[])
+atomTypes['Oa'  ].setActions(incrementBond=[],               decrementBond=[],               formBond=['O0sc'],      breakBond=[],            incrementRadical=[],       decrementRadical=[],       incrementLonePair=[],      decrementLonePair=['O2s','O2sc'])
+atomTypes['O0sc'].setActions(incrementBond=[],               decrementBond=[],               formBond=['O0sc'],      breakBond=['Oa','O0sc'], incrementRadical=[],       decrementRadical=[],       incrementLonePair=[],      decrementLonePair=['O2s','O2sc'])
+atomTypes['O2s' ].setActions(incrementBond=['O2d'],          decrementBond=[],               formBond=['O2s','O2sc'],breakBond=['O2s'],       incrementRadical=['O2s'],  decrementRadical=['O2s'],  incrementLonePair=['Oa','O0sc'],decrementLonePair=['O4sc'])
+atomTypes['O2sc'].setActions(incrementBond=['O2d'],          decrementBond=[],               formBond=[],            breakBond=['O2s'],       incrementRadical=['O2sc'], decrementRadical=['O2sc'], incrementLonePair=[],      decrementLonePair=['O4sc'])
+atomTypes['O2d' ].setActions(incrementBond=[],               decrementBond=['O2s','O2sc'],   formBond=[],            breakBond=[],            incrementRadical=['O2d'],  decrementRadical=['O2d'],  incrementLonePair=[],      decrementLonePair=['O4dc','O4tc'])
+atomTypes['O4sc'].setActions(incrementBond=['O4dc'],         decrementBond=[],               formBond=['O4sc'],      breakBond=['O4sc'],      incrementRadical=['O4sc'], decrementRadical=['O4sc'], incrementLonePair=['O2s','O2sc'],decrementLonePair=[])
+atomTypes['O4dc'].setActions(incrementBond=['O4tc'],         decrementBond=['O4sc'],         formBond=['O4dc'],      breakBond=['O4dc'],      incrementRadical=['O4dc'], decrementRadical=['O4dc'], incrementLonePair=['O2d'], decrementLonePair=[])
+atomTypes['O4tc'].setActions(incrementBond=[],               decrementBond=['O4dc'],         formBond=[],            breakBond=[],            incrementRadical=[],       decrementRadical=[],       incrementLonePair=['O2d'], decrementLonePair=[])
 atomTypes['O4b' ].setActions(incrementBond=[],               decrementBond=[],               formBond=[],            breakBond=[],            incrementRadical=[],       decrementRadical=[],       incrementLonePair=[],      decrementLonePair=[])
 
 atomTypes['Ne'  ].setActions(incrementBond=[],               decrementBond=[],               formBond=[],            breakBond=[],            incrementRadical=['Ne'],   decrementRadical=['Ne'],   incrementLonePair=[],      decrementLonePair=[])
