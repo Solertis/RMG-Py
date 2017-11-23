@@ -31,14 +31,13 @@ Atom type       Description
 ``C``           carbon atom with any local bond structure
 ``Ca``          carbon atom with two lone pairs and no bonds
 ``Cs``          carbon atom with up to four single bonds
-``Csc``         charged carbon atom with up to five single bonds
+``Csc``         charged carbon atom with up to three single bonds
 ``Cd``          carbon atom with one double bond (not to O or S) and up to two single bonds
+``Cdc``         charged carbon atom with one double bond and up to one single bond
 ``CO``          carbon atom with one double bond to oxygen and up to two single bonds
 ``CS``          carbon atom with one double bond to sulfur and up to two single bonds
 ``Cdd``         carbon atom with two double bonds
-``Cdc``         charged carbon atom with one to two double bonds and up to three single bonds
 ``Ct``          carbon atom with one triple bond and up to one single bond
-``Ctc``         charged carbon atom with one triple bond and up to two single bonds
 ``Cb``          carbon atom with up to two benzene bonds and up to one single bond
 ``Cbf``         carbon atom with three benzene bonds
 ``C2s``         carbon atom with one lone pair (valance 2) and up to two single bonds
@@ -55,20 +54,14 @@ Atom type       Description
 ``N1dc``        charged nitrogen atom with two lone pairs (valance 1), one double bond
 ``N3s``         nitrogen atom with one lone pair (valance 3) with up to three single bonds
 ``N3d``         nitrogen atom with one lone pair (valance 3), one double bond and up to one single bond
-``N3dc``        charged nitrogen atom with one lone pair (valance 3), one or two double bonds and up to two single bonds
 ``N3t``         nitrogen atom with one lone pair (valance 3) and one triple bond
-``N3tdc``       charged nitrogen atom with one lone pair (valance 3), one triple bond, up to one double bond and up to one single bond
 ``N3b``         nitrogen atom with one lone pair (valance 3) and two benzene bonds
 ``N5sc``        charged nitrogen atom with no lone pairs (valance 5) with up to four single bonds
-``N5d``         nitrogen atom with no lone pairs (valance 5), one double bond and up to three single bonds
 ``N5dc``        charged nitrogen atom with no lone pairs (valance 5), one double bond and up to two single bonds
-``N5dd``        nitrogen atom with with no lone pairs (valance 5), two double bonds and up to one single bond
 ``N5ddc``       charged nitrogen atom with with no lone pairs (valance 5) and two double bonds
 ``N5dddc``      charged nitrogen atom with with no lone pairs (valance 5) and three double bonds
 ``N5t``         nitrogen atom with with no lone pairs (valance 5), one triple bond and up to two single bonds
 ``N5tc``        charged nitrogen atom with with no lone pairs (valance 5), one triple bond and up to one single bond
-``N5td``        nitrogen atom with with no lone pairs (valance 5), one triple bond and one double bond
-``N5tdc``       charged nitrogen atom with with no lone pairs (valance 5), one triple bond, one double bond and up to three single bonds
 ``N5b``         nitrogen atom with with no lone pairs (valance 5) and two benzene bonds (one of the lone pairs also participates in the aromatic bond) and up to one single bond
 ``N5bd``        nitrogen atom with with no lone pairs (valance 5), two benzene bonds, and one double bond
 *Oxygen atom types*
@@ -78,11 +71,8 @@ Atom type       Description
 ``O0sc``        charged oxygen with three lone pairs (valance 0) and up to one single bond
 ``O0dc``        charged oxygen atom with three lone pairs (valance 0) and one double bond
 ``O2s``         oxygen atom with two lone pairs (valance 2) and up to two single bonds
-``O2sp``        charged oxygen atom with two lone pairs (valance 2) and up to one single bond
-``O2sn``        charged oxygen atom with two lone pairs (valance 2) and up to three single bonds
+``O2sc``        charged oxygen atom with two lone pairs (valance 2) and up to one single bond
 ``O2d``         oxygen atom with two lone pairs (valance 2) and one doubel bond
-``O2dc``        charged oxygen atom with two lone pairs (valance 2), one double bond and up to one single bond
-``O2tc``        charged oxygen atom with two lone pairs (valance 2) and one triple bond
 ``O4sc``        charged oxygen atom with one one pair (valance 4) and up to three single bonds
 ``O4dc``        charged oxygen atom with one one pair (valance 4), one double bond and up to one single bond
 ``O4tc``        charged oxygen atom with one one pair (valance 4) and one triple bond
